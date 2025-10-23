@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AESC - Product Showcase</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="intro-overlay">
+        <canvas id="particle-canvas"></canvas>
+        <img src="img/aesc-Picsart-AiImageEnhancer (2).jpg" alt="AESC Logo" class="intro-logo">
+        <button class="enter-btn">ENTER</button>
+        <div class="overlay-text" data-en="Press ENTER to Continue" data-th="กด ENTER เพื่อเข้าสู่เว็บไซต์">Press ENTER to Continue</div>
+    </div>
+
+    <header class="navbar fade-start">
+        <div class="logo">
+            <img src="img/aesc-Picsart-AiImageEnhancer (2).jpg" alt="AESC Logo">
+        </div>
+        <div class="nav-center">
+            
+            <div class="lang-switch">
+                <button class="lang-btn en" onclick="setLanguage('en')">
+                    <span class="flag"></span>EN
+                </button>
+                <button class="lang-btn th" onclick="setLanguage('th')">
+                    <span class="flag"></span>TH
+                </button>
+            </div>
+           
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" data-en="Home" data-th="หน้าหลัก">Home</a></li>
+                <li><a href="#" data-en="About" data-th="เกี่ยวกับ">About</a></li>
+                <li><a href="#" data-en="Work With Us" data-th="ร่วมงานกับเรา">Work With Us</a></li>
+                <li><a href="#" data-en="Contact" data-th="ติดต่อ">Contact</a></li>
+                <li><a href="#" data-en="More" data-th="เพิ่มเติม">More</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section fade-start">
+            <div class="product-container">
+                <div class="product-slide" data-title="High-Precision Sensor" data-desc="Smart sensor for industrial control systems...">
+                    <img data-src="https://inwfile.com/s-o/wb1k9k.jpg" alt="Product 1" class="lazy">
+                    <div class="product-info">
+                        <h2 data-en="High-Precision Sensor" data-th="เซนเซอร์ตรวจจับอัจฉริยะ">High-Precision Sensor</h2>
+                        <p data-en="Smart sensor for industrial control systems..." data-th="เซนเซอร์ตรวจจับอัจฉริยะสำหรับระบบควบคุมอุตสาหกรรม..."> เซนเซอร์ตรวจจับอัจฉริยะสำหรับระบบควบคุมอุตสาหกรรม... </p>
+                    </div>
+                </div>
+                <div class="product-slide" data-title="Smart Control Panel" data-desc="Smart control cabinet with capacitive touch screen...">
+                    <img data-src="https://www.fgttw.com/wp-content/uploads/2022/01/all-in-one-smart-control-panel-model-nature-7-series.jpg" alt="Product 2" class="lazy">
+                    <div class="product-info">
+                        <h2 data-en="Smart Control Panel" data-th="ตู้ควบคุมไฟฟ้าอัจฉริยะ">Smart Control Panel</h2>
+                        <p data-en="Smart control cabinet with capacitive touch screen..." data-th="ตู้ควบคุมไฟฟ้าอัจฉริยะพร้อมจอสัมผัสแบบ Capacitive..."> ตู้ควบคุมไฟฟ้าอัจฉริยะพร้อมจอสัมผัสแบบ Capacitive... </p>
+                    </div>
+                </div>
+                <div class="product-slide" data-title="Industrial Motor System" data-desc="High-performance motor system with vibration sensor...">
+                    <img data-src="https://inwfile.com/s-dc/knhmom.png" alt="Product 3" class="lazy">
+                    <div class="product-info">
+                        <h2 data-en="Industrial Motor System" data-th="ระบบมอเตอร์ประสิทธิภาพสูง">Industrial Motor System</h2>
+                        <p data-en="High-performance motor system with vibration sensor..." data-th="ระบบมอเตอร์ประสิทธิภาพสูงพร้อมเซนเซอร์ตรวจจับการสั่นสะเทือน..."> ระบบมอเตอร์ประสิทธิภาพสูงพร้อมเซนเซอร์ตรวจจับการสั่นสะเทือน... </p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer fade-start">
+        <div class="footer-left">
+            <img src="img/aesc-Picsart-AiImageEnhancer (2).jpg" alt="AESC Logo">
+            <div class="footer-company">
+                <div>บริษัท เออีเอสซี จำกัด</div>
+                <div>AESC CO.,LTD.</div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-contact">
+                <p><strong>Contact:</strong> 02-123-4567 | contact@aesc.com</p>
+            </div>
+            <div class="footer-address">
+                <p>123/45 Mueang Rayong, Rayong, Thailand</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="line"><i class="fab fa-line"></i></a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <img id="modal-img" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
